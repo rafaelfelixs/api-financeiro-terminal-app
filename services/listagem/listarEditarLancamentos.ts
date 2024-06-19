@@ -1,4 +1,4 @@
-import {confirm, select} from "@inquirer/prompts";
+import {select} from "@inquirer/prompts";
 
 export async function listarEditarLancamentos(lancamentos) {
     let indiceLancamentoEscolhido: string;
