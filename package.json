@@ -1,0 +1,25 @@
+{
+  "name": "app-financeiro-terminal",
+  "version": "1.0.0",
+  "description": "Aplicacao financeira para terminal",
+  "main": "index.ts",
+  "scripts": {
+    "dev": "tsx ./index.ts",
+    "start": "node build/index.js",
+    "build": "tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@inquirer/prompts": "^5.0.5",
+    "chalk": "^5.3.0",
+    "figures": "^6.1.0",
+    "inquirer-action-select": "^0.0.3",
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "tsx": "^4.15.6",
+    "typescript": "^5.3.3"
+  }
+}
