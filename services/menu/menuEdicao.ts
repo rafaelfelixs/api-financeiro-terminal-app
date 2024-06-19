@@ -17,8 +17,7 @@ export async function mostrarMenuEdicao(lancamentos): Promise<Lancamentos[]> {
     }
 
     if (opcaoMenu === 'editarAlgumRegistro') {
-        const indiceLancamentoEditado = listarEditarLancamentos(lancamentos);
-        console.log(`Indice: ${indiceLancamentoEditado}`);
+        const indiceLancamentoEditado = await listarEditarLancamentos(lancamentos);
         lancamentosEditados = await edicaoLancamento(lancamentos, indiceLancamentoEditado);
     }
 
