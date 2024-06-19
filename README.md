@@ -52,7 +52,7 @@ ou
 Comando para executar o projeto no terminal (após a instalação das dependências!)
 
 ```bash
-  node run dev
+  yarn run dev
 ```
 
 Esse comando irá inicializar o arquivo index.ts por meio da lib tsx
@@ -61,13 +61,13 @@ Esse comando irá inicializar o arquivo index.ts por meio da lib tsx
 Comando para fazer o build dos arquivos para js
 
 ```bash
-  node run build
+  yarn run build
 ```
 
 Comando para rodar o arquivo index.js buildado a partir da pasta ./build
 
 ```bash
-  node run start
+  yarn run start
 ```
 
 
