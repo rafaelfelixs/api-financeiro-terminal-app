@@ -31,7 +31,3 @@ async function escolhendoLancamentos(lancamentos): Promise<any>{
         choices: choicesLancamentos,
     });
 }
-
-function confirmarLancamento(): Promise<boolean> {
-    return confirm({message: 'Deseja realmente selecionar o lançamento?'});
-}
