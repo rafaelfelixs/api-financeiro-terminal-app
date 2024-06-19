@@ -9,7 +9,7 @@ import {
 } from "../registro/registrarLancamento";
 import {Lancamentos} from "../../Lancamentos";
 
-export async function edicaoLancamento(lancamentos, indiceDoLancemento): Promise<Lancamentos[]> {
+export async function edicaoLancamento(lancamentos: Lancamentos[], indiceDoLancemento): Promise<Lancamentos[]> {
     const respostaMenuEdicao = await opcoesEdicao(lancamentos[indiceDoLancemento])
     if (respostaMenuEdicao.action === 'show') {
         console.log('Mostrando lançamento...');
@@ -27,7 +27,11 @@ export async function edicaoLancamento(lancamentos, indiceDoLancemento): Promise
     }
 
     if (respostaMenuEdicao.action === 'delete') {
-        return await lancamentos.filter((item, key) => key !== indiceDoLancemento);
+        if (lancamentos.length === 1) {
+            return [];
+        }
+
+        return lancamentos.splice(indiceDoLancemento, 1);
     }
 }
 
